@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><slot name="title" /></title>
+    <script type="module" src="/src/scripts/initAOS.js"></script>
+    <!-- Bootstrap Icons (si aún no están cargados) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- animaciones css -->
+<link rel="stylesheet" href="https://unpkg.com/@animxyz/core" />
+
+  </head>
+
+  <body>
+    <Navbar />
+
+    <main class="" style="margin-top: 100px;">
+      <slot />
+        <WhatsAppButton />
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer></script>
+  </body>
+</html>

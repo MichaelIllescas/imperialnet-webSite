@@ -1,0 +1,36 @@
+---
+// src/components/WhatsAppButton.astro
+const phone = '5492923530179';
+const link = `https://wa.me/${phone}`;
+---
+
+<a href={link} class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<style>
+ .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+  color: white;
+}
+
+</style>

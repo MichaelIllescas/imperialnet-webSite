@@ -1,0 +1,119 @@
+/* Reset específico para tu proyecto */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilo del navbar con Bootstrap */
+.navbar {
+  padding: 0rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+  
+}
+
+/* Contenedor central */
+.navbar .container {
+  max-width: 1200px;
+  display: flex;
+}
+
+/* Logo y texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 140px;
+  height: 90px;
+  
+}
+
+.logo-text {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Ítems del nav */
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.4s;
+}
+
+.navbar-nav .nav-link:hover {
+  color:#104665 !important;
+}
+
+
+
+/* Botón “Empezar” */
+.btn-empezar {
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white !important;
+    border: 1px solid #eaecf1;
+  text-decoration: none;
+  transition: all 0.3s !important;
+  font-weight: 500;
+}
+
+.btn-empezar:hover {
+  background:#09293b !important;
+  color: white !important;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.288); 
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* sombra larga y suave */
+  backdrop-filter: blur(15px); 
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media (max-width: 991.98px) {
+  .btn-empezar {
+    display: block;
+    margin: 1rem auto 0 auto; /* margen superior + centrado horizontal */
+    text-align: center;
+    width: auto;
+  }
+  .navbar  .navbar-collapse{
+  background-color: #000;
+  box-shadow: 0 8px 40px rgba(1, 0, 0, 0.6); /* sombra larga y suave */
+  backdrop-filter: blur(15px); 
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+  border-radius: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 0 1rem; /* reduce padding horizontal */
+  }
+
+  .logo {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .logo-icon {
+    width: 120px; /* opcional: reduce un poco el tamaño si querés */
+    height: auto;
+  }
+}
