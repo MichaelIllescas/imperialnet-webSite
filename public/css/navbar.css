@@ -113,7 +113,9 @@ body {
   }
 
   .logo-icon {
-    width: 120px; /* opcional: reduce un poco el tamaño si querés */
+    width: 90px; /* opcional: reduce un poco el tamaño si querés */
     height: auto;
   }
 }
+
+
