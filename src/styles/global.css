@@ -42,18 +42,18 @@ body {
 .btn-empezar {
   background: linear-gradient(135deg, #00aaff, #0077cc);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 600;
   font-size: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .btn-empezar:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 170, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
 }
 
 .hero-content h1 {
@@ -68,18 +68,4 @@ body {
   text-shadow: 1px 1px 25px rgba(0, 0, 0, 1.5);
 }
 
-.btn-empezar {
-  background: linear-gradient(135deg, #00aaff, #0077cc);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.btn-empezar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
-}
 
