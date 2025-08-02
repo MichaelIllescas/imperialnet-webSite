@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import WhatsAppButton from "../components/WhatsAppButton.astro";
+import initAOS from "../scripts/initAOS.js?url";
 const { title, description } = Astro.props;
 ---
 
@@ -14,7 +15,7 @@ const { title, description } = Astro.props;
       name="description"
       content={description || 'Desarrollamos soluciones de software a medida'}
     />
-    <script type="module" src="/src/scripts/initAOS.js"></script>
+    <script type="module" src={initAOS}></script>
     <!-- Bootstrap Icons (si aún no están cargados) -->
     <link
       rel="stylesheet"
