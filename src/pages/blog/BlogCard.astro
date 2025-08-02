@@ -1,0 +1,15 @@
+---
+const { post } = Astro.props;
+---
+
+<div class="col-md-6 col-lg-4">
+  <div class="card h-100 bg-secondary border-0 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-semibold text-white">{post.frontmatter.title}</h5>
+      <p class="card-text text-white">{post.frontmatter.description}</p>
+      <a href={post.url} class="text-white text-decoration-underline">
+        Leer más
+      </a>
+    </div>
+  </div>
+</div>

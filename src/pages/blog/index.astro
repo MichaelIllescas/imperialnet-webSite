@@ -1,23 +1,21 @@
 ---
 import Layout from "../../layouts/BaseLayout.astro";
-const posts = await Astro.glob("./*.md");
+import BlogCard from "./BlogCard.astro";
+
+// Cargar todos los posts .md de la carpeta actual
+const posts = await Astro.glob("./*.astro");
 ---
 
-<Layout title="Blog | Imperial Net" description="Consejos simples sobre digitalización y software para PyMEs">
-  <section class="py-5 text-white">
+<Layout
+  title="Blog | Imperial Net"
+  description="Consejos simples sobre digitalización y software para PyMEs"
+>
+  <section class="py-5 text-white bg-dark">
     <div class="container">
-      <h1 class="mb-4">Blog</h1>
+      <h1 class="mb-4 text-center">Blog</h1>
       <div class="row g-4">
         {posts.map((post) => (
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 bg-secondary border-0 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold text-white">{post.frontmatter.title}</h5>
-                <p class="card-text text-white">{post.frontmatter.description}</p>
-                <a href={post.url} class="text-white text-decoration-underline">Leer más</a>
-              </div>
-            </div>
-          </div>
+          <BlogCard post={post} />
         ))}
       </div>
     </div>
