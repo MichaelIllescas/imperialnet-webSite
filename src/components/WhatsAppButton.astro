@@ -1,7 +1,7 @@
 ---
 // src/components/WhatsAppButton.astro
-const phone = '5492923530179';
-const link = `https://wa.me/${phone}`;
+import { WHATSAPP_PHONE } from '../config';
+const link = `https://wa.me/${WHATSAPP_PHONE}`;
 ---
 
 <a href={link} class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
