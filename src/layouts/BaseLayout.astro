@@ -2,13 +2,18 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import WhatsAppButton from "../components/WhatsAppButton.astro";
+const { title, description } = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><slot name="title" /></title>
+    <title>{title || 'Imperial Net'}</title>
+    <meta
+      name="description"
+      content={description || 'Desarrollamos soluciones de software a medida'}
+    />
     <script type="module" src="/src/scripts/initAOS.js"></script>
     <!-- Bootstrap Icons (si aún no están cargados) -->
     <link
